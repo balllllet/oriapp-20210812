@@ -14,6 +14,7 @@ class Item < ApplicationRecord
     validates :image
     validates :name
     validates :description
+    validates :add
     validates :price
     validates :category_id
     validates :sales_status_id

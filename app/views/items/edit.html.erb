@@ -1,7 +1,6 @@
 
 <div class="items-sell-contents">
   <header class="items-sell-header">
-    <%= link_to image_tag('-color.png' , size: '185x50'), "/" %>
   </header>
   
   <div class="items-sell-main">
@@ -31,6 +30,8 @@
         <span class="indispensable">必須</span>
       </div>
       <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      
+      
       <div class="items-explain">
         <div class="weight-bold-text">
           本文
@@ -38,6 +39,16 @@
         </div>
         <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
       </div>
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          場所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :add, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+
+
      </div>
 
     <div class="items-detail">
@@ -100,7 +111,6 @@
   </div>
   <% end %>
 
-  <footer class="items-sell-footer">
-    
-  </footer>
+  
 </div>
+<%= render "shared/footer" %>

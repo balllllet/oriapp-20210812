@@ -22,6 +22,7 @@
 | ---------------------- | ---------- | ----------- |
 | name                   | string     | null: false |
 | description            | text       | null: false |
+| add                    | string     | null: false |
 | category_id            | integer    | null: false |
 | sales_status_id        | integer    | null: false |
 | prefecture_id          | integer    | null: false |

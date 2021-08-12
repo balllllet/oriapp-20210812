@@ -1,14 +1,10 @@
 <div class="items-sell-contents">
   <header class="items-sell-header">
-
-
   </header>
   <div class="items-sell-main">
     <h2 class="items-sell-title">商品の情報を入力してください</h2>
     <%= form_with model: @item, url: items_path,  method: :post, local: true do |f| %>
-
     <%= render 'shared/error_messages', model: f.object %>
-    
     <div class="img-upload">
       <div class="weight-bold-text">
         画像
@@ -26,14 +22,25 @@
         商品名
       </div>
       <%= f.text_area :name, class:"items-text", id:"item-name", maxlength:"40" %>
+
+
       <div class="items-explain">
         <div class="weight-bold-text">
-          本文
+          商品説明
         </div>
-      <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"希望の住所の大まかな場所や、希望条件、商品の状態について説明をお書き下さい。" ,rows:"7" ,maxlength:"1000" %>
+      <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"希望条件、商品の状態について説明をお書き下さい。" ,rows:"7" ,maxlength:"1000" %>
       </div>
+
+       <div class="items-explain">
+        <div class="weight-bold-text">
+          取引場所
+        </div>
+        <%= f.text_area :add, class:"items-text", id:"item-info", placeholder:"希望の取引場所について説明をお書き下さい。" ,rows:"7" ,maxlength:"1000" %>
+ </div>
+
     </div>
-  
+
+
     <div class="items-detail">
       <div class="weight-bold-text"></div>
       <div class="form">
