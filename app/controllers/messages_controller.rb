@@ -1,7 +1,8 @@
 class MessagesController < ApplicationController
 
   def create
-    @message = Message.new(message_params)
+    @message = Item.order("created_at ASC")
+    @message = Message.new(message_params,)
     if @message.save
       ActionCable.server.broadcast 'message_channel', content: @message, user: current_user
     end

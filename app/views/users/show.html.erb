@@ -1,4 +1,5 @@
 <p>トップページへ</p><%= link_to image_tag("back.png", class:"home-icon"), "/" %><br>
+
 <div class= "u_title">　　　ユーザーの出品した商品一覧です🌺</div><br>
 
   <ul class='item-lists'>
@@ -12,7 +13,6 @@
             <div class='sold-out'><span>sold out</span></div>
           <%end%>
         </div>
-        
         <div class='item-info'>
         <h3 class='item-name'>
         <%= item.name %>
@@ -21,11 +21,11 @@
         <span>¥<%= item.price %><br><%= item.scheduled_delivery.name %></span>
          </div>
         </div>
-
       <% end %>
     </li>
     <% end %>
  </ul>
+
 
 <%= render "shared/footer" %>
 
