@@ -1,0 +1,8 @@
+<div class= 'purchase-btn-back'>
+<li>トップページへ<%= link_to image_tag("home.jpeg", class:'purchase-btn'), "/" %></li>
+<li>車椅子を出品する<%= link_to image_tag("camera.png", class:'purchase-btn'), "/items/new" %></li>
+ <% if user_signed_in? %>
+<li>マイページ<%= link_to image_tag("users.jpeg", class:'purchase-btn'), user_path(current_user) %></li>
+ <% end %>
+<li>おすすめアプリ<%= link_to image_tag("app.jpeg", class:'purchase-btn'), "/apps/show" %></li>
+</div >

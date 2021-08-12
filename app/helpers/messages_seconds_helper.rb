@@ -1,0 +1,2 @@
+module MessagesSecondsHelper
+end

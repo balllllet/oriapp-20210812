@@ -1,0 +1,8 @@
+.purchase-btn-back {
+  display: flex;
+}
+
+.purchase-btn {
+  width: 120px;
+  background: #57c7f3;
+}

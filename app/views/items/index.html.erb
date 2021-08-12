@@ -1,0 +1,68 @@
+<header class='top-page-header'>
+  <div class='search-bar-contents'>
+    <div class='top-header-t'><b> wheel-trade </b></div><br>
+
+    <div class='top-header'>
+    <b>wheel-tradeは、車椅子専用マッチング型フリーマーケットアプリです 
+    <br> まずはログインをして、貸したい売りたい車椅子を出品しましょう
+    <br>購入貸出希望の方は、車椅子を選びコメント欄で相談を行いましょう
+    <br>希望条件を話し合って気持ちの良い取引を行ってください 
+</b> 
+  </div>
+
+  <%# <div class='nav'> %>
+    <%# <ul class='lists-left'> %>
+      <%# <%= link_to 'カテゴリー', "#", class: "category-list" %>
+      <%# <%= link_to 'ブランド', "#", class: "brand-list" %>
+    <%# </ul> %>
+
+
+    <%# <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %> 
+  <%# <%= form.text_field :keyword, placeholder: "キーワードから探す", class: "input-box" %> 
+  <%# <%= form.button "o", class: "search-button" do%> 
+  <%# <%= image_tag "search.png", class:"search-icon" %> 
+  <%# <% end %> 
+<%# <% end %> 
+<br>
+
+    <ul class='lists-right'>
+       <% if user_signed_in? %>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+      <div class="sama">様</div> 
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+       <% end %>
+    </ul>
+  </div>
+</header>
+
+  <div class='item-contents'>
+    <ul class='item-lists'>
+      <% @item.each do |item| %>
+      <li class='list'>
+        <%= link_to item_path(item.id) do %>
+        <div class='item-img-content'>
+          <%= image_tag item.image, class: "item-img" %>
+         <%if item.order.present? %>
+          <div class='sold-out'>
+            <span>sold out</span>
+          </div>
+         <%end%>
+        </div>
+
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= item.name %>
+          </h3>
+          <div class='item-price'>
+            <span>¥<%= item.price %><br><%= item.scheduled_delivery.name %></span>
+          </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<%= render "shared/footer" %>

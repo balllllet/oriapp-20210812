@@ -1,0 +1,67 @@
+<div class="app">
+<p>トップページへ</p><%= link_to image_tag("back.png", class:"home-icon"), "/" %>
+<br><br><br>
+
+<div class= app-title>車椅子ユーザーにおすすめの便利アプリの紹介です  ❇︎  ぜひ使用してみてください
+</div>
+
+
+
+<li><%= link_to image_tag"wheelog!.jpeg",class: "app-image"%>
+<%= link_to 'wheeLog!', 'https://wheelog.com/hp/' ,class: "app-url"%> 
+<br>
+<div class= app-app>
+・車椅子で通れる道か、調べられます！24時間TVでも取り上げられました<br>
+・バリアフリー＆バリア情報をシェアできる車椅子ユーザー必見ナビアプリ<br>
+・気になる場所は事前に「リクエスト」。他のユーザーが教えてくれる<br>
+・「走行ログ」機能搭載。車椅子ユーザーたちのお出かけも誰かの役に立つ<br>
+</div>
+</li>
+<br>
+
+
+<li><%= link_to image_tag"bmaps.jpeg",class: "app-image"%>
+<%= link_to 'Bmaps', 'https://apps.apple.com/jp/app/bmaps/id1088807625' ,class: "app-url"%> 
+<br>
+<div class= app-app>
+・お店や施設の情報がわかります！<br>
+・入り口の段差の数は？ 補助犬対応OK？ 細かい検索ができる<br>
+・実際に行った人のレビューが見られる。自分で評価することも可能<br>
+・車いすや障害、妊産婦などに向けた施設情報が満載<br>
+</div>
+</li>
+<br>
+
+
+
+<li><%= link_to image_tag"cke.peg",class: "app-image"%>
+<%= link_to 'Check A Toilet for iPhone', 'https://apps.apple.com/jp/app/check-a-toilet-for-iphone/id371963398' ,class: "app-url"%> 
+<br>
+<div class= app-app>
+・ユニバーサルトイレの場所を検索できる<br>
+・写真や信頼性の項目付きで肩すかしを喰らうこともなし<br>
+・見つけたトイレを登録して、報酬がもらえることも<br>
+・iPhone専用アプリです<br>
+</div>
+</li>
+<br>
+
+
+
+
+
+<li><%= link_to image_tag"baba.jpeg",class: "app-image"%>
+<%= link_to 'バリアフリー情報共有 FunGoOut', 'https://fungoout.com/' ,class: "app-url"%> 
+<br>
+<div class= app-app>
+・バリアフリーなお店や施設の情報を共有。より快適な外出にするためのSNS<br>
+・ユーザーの声で作られているので、リアルな状況や使い勝手が伝わる<br>
+・共有された情報は、地図上でアイコン表示。近くの便利施設が一目瞭然<br>
+・iPhone専用アプリです<br>
+</div>
+</li>
+<br>
+
+</div>
+
+<%= render "shared/footer" %>

@@ -1,0 +1,31 @@
+// Place all the styles related to the apps controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.app{
+  background-color: #FFF;
+  list-style: none;
+}
+.app-title{
+  font-size: 20px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  color: rgb(91, 181, 233);
+}
+
+
+.app-image{
+height: 40px;
+}
+
+.app-app{
+  font-size: 20px;
+  color: gray;
+}
+
+.app-url{
+  font-size: 20px;
+  color: black;
+  font-weight:  bold;
+  text-decoration: underline;
+
+}

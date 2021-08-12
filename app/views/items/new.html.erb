@@ -1,0 +1,96 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+
+
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力してください</h2>
+    <%= form_with model: @item, url: items_path,  method: :post, local: true do |f| %>
+
+    <%= render 'shared/error_messages', model: f.object %>
+    
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        商品名
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          本文
+        </div>
+      <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"希望の住所の大まかな場所や、希望条件、商品の状態について説明をお書き下さい。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+  
+    <div class="items-detail">
+      <div class="weight-bold-text"></div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <div class="weight-bold-text">
+          商品の状態
+        </div>
+        <%= f.collection_select(:sales_status_id, SalesStatus.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+      </div>
+    </div>
+    
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          都道府県
+        </div>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+        <div class="weight-bold-text">
+           貸出期間or売却 
+        </div>
+        <%= f.collection_select(:scheduled_delivery_id, ScheduledDelivery.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      </div>
+    </div>
+   
+    <div class="sell-price">
+      <div class="weight-bold-text question-text">
+      </div>
+      <div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>価格</span>
+          </div>
+          <span class="sell-yen">¥</span>
+          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）300" %>
+        </div>
+      </div>
+
+    <br>
+
+    <div class="sell-btn-contents">
+
+      <%= f.submit "出品する" ,class:"sell-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+    </ul>
+    <p class="inc">
+    </p>
+  </footer>
+</div>
+<%= render "shared/footer" %>
