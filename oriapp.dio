@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="p4pm3jxRsIWK-kiBn1m2" name="ページ1">
-        <mxGraphModel dx="778" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="336" dy="567" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -42,15 +42,6 @@
                 </mxCell>
                 <mxCell id="92" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;&amp;nbsp;address(references型)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" vertex="1" parent="7">
                     <mxGeometry y="86" width="200" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="11" value="messages_secondsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
-                    <mxGeometry x="520" y="170" width="200" height="86" as="geometry"/>
-                </mxCell>
-                <mxCell id="60" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;&amp;nbsp;item(references型)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" vertex="1" parent="11">
-                    <mxGeometry y="26" width="200" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="66" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;&amp;nbsp;user(references型)&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" vertex="1" parent="11">
-                    <mxGeometry y="56" width="200" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="itemsテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
                     <mxGeometry x="80" y="350" width="250" height="266" as="geometry"/>
@@ -100,12 +91,6 @@
                         <mxPoint x="480" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="47" value="" style="fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1" source="24" target="11">
-                    <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="341" y="109" as="sourcePoint"/>
-                        <mxPoint x="530" y="270" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="48" value="" style="fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.025;entryY=0.154;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1" source="44" target="7">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="340" y="193.5" as="sourcePoint"/>
@@ -122,12 +107,6 @@
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="330" y="541" as="sourcePoint"/>
                         <mxPoint x="480" y="570" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="77" value="" style="fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERzeroToOne;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1" source="30" target="66">
-                    <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="330" y="515" as="sourcePoint"/>
-                        <mxPoint x="520" y="170" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="85" value="addressesテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#60a917;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;labelBackgroundColor=none;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">

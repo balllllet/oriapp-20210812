@@ -24,7 +24,6 @@ end
 def show
   @messages = @item.messages.includes(:user)
   @message = Message.new
-  @messages_second = @item.messages.includes(:user)
 end 
 
 def edit
