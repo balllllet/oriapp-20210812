@@ -3,6 +3,7 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
+        introduction: 自己紹介
         family_name: 苗字
         first_name: 名前          
         family_name_reading: 苗字(カナ)
