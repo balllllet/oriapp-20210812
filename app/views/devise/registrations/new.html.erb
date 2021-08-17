@@ -23,14 +23,21 @@
     <%= f.text_area :introduction, class:"input-default", id:"introduction", placeholder:"例) 〇〇用の商品をたまにレンタルしています。" %>
   </div>
 
-
-
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
     </div>
     <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+    <div class='form-text-wrap'>
+      <label class="form-text">電話番号</label>
+    </div>
+    <%= f.text_area :tel, class:"input-default", id:"tel", autofocus: true %>
+  </div>
+
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">パスワード</label>

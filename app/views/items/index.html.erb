@@ -9,27 +9,21 @@
     <br>希望条件を話し合って気持ちの良い取引を行ってください 
 </b> 
   </div>
+<div class='search-header'>
+  商品名から検索ができます！  </div>
 
-  <%# <div class='nav'> %>
-    <%# <ul class='lists-left'> %>
-      <%# <%= link_to 'カテゴリー', "#", class: "category-list" %>
-      <%# <%= link_to 'ブランド', "#", class: "brand-list" %>
-    <%# </ul> %>
+  <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
 
-
-    <%# <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %> 
-  <%# <%= form.text_field :keyword, placeholder: "キーワードから探す", class: "input-box" %> 
-  <%# <%= form.button "o", class: "search-button" do%> 
-  <%# <%= image_tag "search.png", class:"search-icon" %> 
-  <%# <% end %> 
-<%# <% end %> 
 <br>
 
     <ul class='lists-right'>
        <% if user_signed_in? %>
       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"  %></li>
       <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
-      <div class="sama">様🌷</div> 
+      <div class="sama">様　🍃</div> 
       <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
       <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>

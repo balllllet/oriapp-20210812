@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!,except: [:index, :show]
+  before_action :authenticate_user!,except: [:index, :show, :search]
   before_action :find_id, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :update, :destroy]
   before_action :edit_root, only: [:edit, :update, :destroy]
@@ -42,24 +42,29 @@ def destroy
   redirect_to root_path
 end
 
-def item_params
-  params.require(:item).permit(:image, :name, :description, :add, :category_id, :sales_status_id, :prefecture_id, :scheduled_delivery_id, :price).merge(user_id: current_user.id)
+def search
+  @items = Item.search(params[:keyword])
 end
+
 
 private
- def move_to_index
-  if @item.user.id != current_user.id
-   redirect_to action: :index
+  def item_params
+    params.require(:item).permit(:image, :name, :description, :add, :category_id, :sales_status_id, :prefecture_id, :scheduled_delivery_id, :price).merge(user_id: current_user.id)
   end
- end
 
- def find_id
-  @item = Item.find(params[:id])
- end
-
- def edit_root
-  if @item.order.present?  
-    redirect_to root_path
+  def move_to_index
+    if @item.user.id != current_user.id
+    redirect_to action: :index
+    end
   end
- end
-end
+
+  def find_id
+    @item = Item.find(params[:id])
+  end
+
+  def edit_root
+    if @item.order.present?  
+      redirect_to root_path
+    end
+  end
+  end

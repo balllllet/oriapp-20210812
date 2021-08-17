@@ -1,12 +1,57 @@
+
+
+
 <p>トップページへ</p><%= link_to image_tag("back.png", class:"home-icon"), "/" %><br>
+<div class="blank"></div>
 
-<div class= "u_title">　　　ユーザーの出品した商品一覧です</div><br>
+<div class= "usertitle">【　<%= @user.nickname  %>　様のユーザーページです】</div><br>
 
-  <ul class='item-lists'>
-    <% @user.items.each do |item| %>
-    <li class='list'>
+
+<table class="detail-table">
+  <tbody>
+       <tr>
+          <th class="detail-item">ニックネーム</th>
+          <td class="detail-value"><%= @user.nickname  %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">自己紹介</th>
+          <td class="detail-value"><%= @user.introduction%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メールアドレス</th>
+          <td class="detail-value"><%= @user.email %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">電話番号</th>
+          <td class="detail-value"><%= @user.tel %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">パスワード</th>
+          <td class="detail-value"><%= @user.password %>**********</td>
+        </tr>
+        <tr>
+          <th class="detail-item">お名前</th>
+          <td class="detail-value"><%= @user.family_name %>　<%= @user.first_name%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">お名前(カナ)</th>
+          <td class="detail-value"><%= @user.family_name_reading %>　<%= @user.first_name_reading %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">生年月日</th>
+          <td class="detail-value"><%=@user.birthday%></td>
+        </tr>
+       <tr>
+          <th class="detail-item">出品一覧</th>
+          <td class="detail-value">
+          
+          <%unless @user.items.present? %>
+            出品している車椅子がありません
+          <%end%>
+          
+          <% @user.items.each do |item| %>
+    <li class='list'>             
       <%= link_to item_path(item.id) do %>
-
         <div class='item-img-content'>
         <%= image_tag item.image, class: "item-img" %>
           <%if item.order.present? %>
@@ -23,8 +68,17 @@
         </div>
       <% end %>
     </li>
-    <% end %>
- </ul>
+    <% end %></td>
+        </tr>
+  </tbody>
+</table>
+
+ <div class="option">
+          <%= link_to "編集", edit_user_registration_path(@user.id), class: "item-blue-btn" %>
+      </div>
+      ↑メールアドレスとパスワードを変更できます
+
+<div class="blank"></div>
 
 
 <%= render "shared/footer" %>

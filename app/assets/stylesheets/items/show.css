@@ -196,3 +196,14 @@
   font-size: 36px;
   color: #57c7f3;
 }
+
+.top-page-header-show{
+  width: 100vw;
+  height: 240px;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(91, 181, 233);
+}
+
+

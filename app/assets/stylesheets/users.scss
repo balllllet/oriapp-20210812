@@ -5,3 +5,23 @@
   font-size:  30px;
   color: rgb(91, 181, 233);
 }
+.blank{
+  padding: 3vw;
+}
+
+li {
+  list-style: none;
+}
+
+.sold-out {
+  position: absolute;
+  top: 33%;
+  width: 27.6%;
+  text-align: center;
+  background-color: rgb(104, 60, 60);
+  transform: skewY(-30deg);
+}
+.usertitle{
+  color: rgb(91, 181, 233);
+  font-size: 23px;
+}

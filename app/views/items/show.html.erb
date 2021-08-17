@@ -1,3 +1,21 @@
+<header class='top-page-header-show'>
+  <div class='search-bar-contents'>
+    <div class='top-header-t'><b> wheel-trade </b></div><br>
+<br>
+    <ul class='lists-right'>
+       <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+      <div class="sama">様　🍃</div> 
+       <% end %>
+    </ul>
+  </div>
+</header>
+
+
+
+
+
+
 <%= link_to image_tag("back.png", class:"home-icon"), "/" %>
 
    <div class="warn"> ✳︎コメント欄でやり取りをして下さい✳︎<br>
@@ -27,7 +45,6 @@
         <tr>
           <th class="detail-item">出品者</th>
           <td class="detail-value"><%= link_to @item.user.nickname%></td>
-
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
@@ -46,7 +63,7 @@
           <td class="detail-value"><%= @item.scheduled_delivery.name %></td>
         </tr>
         <tr>
-          <th class="detail-item">タイトル</th>
+          <th class="detail-item">商品名</th>
           <td class="detail-value"><%= @item.name %></td>
         </tr>
         <tr>
@@ -91,11 +108,13 @@
       </button>
     <% end %>
     <% end %>
+    <% unless user_signed_in? %>※ログイン後、やり取りが可能になります。<% end %>
   </div>
 
 
 
 
 </div>
+
 
 <%= render "shared/footer" %>

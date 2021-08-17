@@ -1,3 +1,19 @@
+<header class='top-page-header-show'>
+  <div class='search-bar-contents'>
+    <div class='top-header-t'><b> wheel-trade </b></div><br>
+
+<br>
+
+    <ul class='lists-right'>
+       <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
+      <div class="sama">様　🍃</div> 
+       <% end %>
+    </ul>
+  </div>
+</header>
+
+
 <div class="items-sell-contents">
   <header class="items-sell-header">
   </header>
