@@ -9,15 +9,21 @@
     <br>希望条件を話し合って気持ちの良い取引を行ってください 
 </b> 
   </div>
+
 <div class='search-header'>
   商品名から検索ができます！  </div>
-
   <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
-
 <br>
+
+<ul class='lists-left'>
+  <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
+  <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
+</ul>
+
+
 
     <ul class='lists-right'>
        <% if user_signed_in? %>

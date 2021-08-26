@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
  def index
   @item = Item.order("created_at DESC")
+  @items = Item.all
  end
 
  def new
@@ -44,6 +45,7 @@ end
 
 def search
   @items = Item.search(params[:keyword])
+  # @results = @p.result.includes(:category) 
 end
 
 

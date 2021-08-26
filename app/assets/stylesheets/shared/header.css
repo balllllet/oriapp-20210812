@@ -44,14 +44,7 @@
   width: 100%;
 }
 
-.nav {
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 1vh 0;
-}
+
 
 .lists-left {
   display: flex;
